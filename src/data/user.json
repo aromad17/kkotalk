@@ -1,0 +1,73 @@
+  {
+    "My": [
+      {
+        "id": 1,
+        "name": "Kendrick",
+        "message": "We are back to laughing, crying, living, loving",
+        "img": "https://i.pinimg.com/736x/74/14/0c/74140c8c7188b053f376c67945ec1654.jpg",
+        "email": "777@naver.com"
+      }
+    ],
+    "Friends": [
+      {
+        "id": 1,
+        "name": "Brianna",
+        "message": "Time, look where we are and what we've been through",
+        "img": "https://i.pinimg.com/236x/27/0c/51/270c515a26bb02c232bf0c1cc906ddbb.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Abraham",
+        "message": "sakdjlnsbvnkzsbkjfnbsdkjfnbskd",
+        "img": "https://i.pinimg.com/236x/2f/07/67/2f07672f429d6f806473929a3acf239e.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Duncan",
+        "message": "good",
+        "img": "https://i.pinimg.com/236x/5b/f3/7a/5bf37ae970e001af543ed310772228a9.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Linney",
+        "message": "떡볶이",
+        "img": "https://i.pinimg.com/236x/f3/06/91/f306912c16f8c725cfcfd5d923e1897f.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Natalie",
+        "message": "안녕하세요",
+        "img": "https://i.pinimg.com/236x/e2/90/d5/e290d5304d1a535417aaf6c9883c1d54.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Wallace",
+        "message": "닭갈비",
+        "img": "https://i.pinimg.com/236x/57/b1/6c/57b16cc2ef3c2b7c9609bf260deef7de.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Lawrence",
+        "message": "ㅎ2ㅎ2",
+        "img": "https://i.pinimg.com/236x/9c/e3/f1/9ce3f1b2b969f96ed716162330b2e675.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Kaylee",
+        "message": "별빛이 아름다운 이 밤에 ",
+        "img": "https://i.pinimg.com/236x/0f/de/19/0fde19094ff2f70c3a158aa33cef10af.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Edward",
+        "message": "ㅇㅅㅇ",
+        "img": "https://i.pinimg.com/236x/67/ba/5b/67ba5bd5bd0bd2030f77e09cab8be079.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Jasmine",
+        "message": "내 맘을 깨워 이른 꽃잎처럼 ",
+        "img": "https://i.pinimg.com/736x/7a/b8/21/7ab821a6006675cfe426f9b1d8d7e85a.jpg"
+      }
+    ]
+  }

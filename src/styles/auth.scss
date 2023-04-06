@@ -1,0 +1,125 @@
+@import url(./common.scss);
+
+div.auth_wrap{
+  width:100%;
+  height:100%;
+  background: #A6374B;
+
+  h1{
+    position: absolute;    
+    top:30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height:100px;
+
+    svg{
+      width:100%;
+      height:100%;
+
+      path{
+        fill:#730D28;
+      }
+
+    }
+
+  }
+
+  h2{
+    position: absolute;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#F2F2F2;
+    font-size:32px;
+  }
+
+  div.auth_form{
+    position: relative;
+    top:50%;
+    left:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:350px;
+    transform: translateX(-50%);
+
+    *{
+      display: block;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
+      padding:25px;
+      border: 1px solid #BFB3A8;
+      box-sizing: border-box;
+      margin-bottom:30px;
+
+      input{
+        cursor: pointer;
+      }
+
+      input.input_id, 
+      input.input_pw{
+        width:100%;
+        padding:10px;
+        box-sizing: border-box;
+        font-size:16px;
+        font-weight: 400;
+        margin-bottom:10px;
+      }
+      input.input_pw{
+        margin-bottom:20px;
+      }
+      
+      input.input_submit{
+        width:200px;
+        outline: none;
+        border:none;
+        color:#F2F2F2;
+        background: #8C5946;
+        padding:10px;
+      }
+   }
+
+   div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    margin-bottom: 20px;
+    button{
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:300px;
+      background: #8C5946;
+      border: none;
+      padding:10px;
+      color:#F2F2F2;
+      cursor: pointer;
+      
+      svg{
+        width:20px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+    }
+
+   }
+
+   span{
+    font-weight: 600;
+    font-size:14px;
+    color:#ccc;
+   }
+
+  }
+
+}
