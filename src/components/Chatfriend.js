@@ -13,7 +13,7 @@ function Chatfriend({ name, title, pic }) {
           <span className="chats_name">{name}</span>
           <span className="chats_latest">{title}</span>
         </span>
-        <span className="chats_time"><span>17</span>:<span>35</span></span>
+        <span className="chats_time"><span>17</span> : <span>35</span></span>
       </Link>
     </li>
   )
