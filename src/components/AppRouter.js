@@ -14,7 +14,7 @@ function AppRouter({ isLoggedIn, userObj }) {
 
   return (
 
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         {isLoggedIn ? (
           <Route path='/' element={<Friends userObj={userObj} />} />
