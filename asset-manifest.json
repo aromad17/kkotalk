@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/kkotalk/static/css/main.0c40d92d.css",
+    "main.js": "/kkotalk/static/js/main.e7285470.js",
+    "static/media/kakaofriends.png": "/kkotalk/static/media/kakaofriends.84375bb9f89d79ccd760.png",
+    "static/media/path.png": "/kkotalk/static/media/path.7d00edf73f07bdcecc6d.png",
+    "static/media/kakaostory.png": "/kkotalk/static/media/kakaostory.572f3ce5bf10fbdaac9d.png",
+    "index.html": "/kkotalk/index.html",
+    "main.0c40d92d.css.map": "/kkotalk/static/css/main.0c40d92d.css.map",
+    "main.e7285470.js.map": "/kkotalk/static/js/main.e7285470.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c40d92d.css",
+    "static/js/main.e7285470.js"
+  ]
+}
