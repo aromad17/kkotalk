@@ -7,7 +7,6 @@ import { authService } from '../fbase';
 function Header({ titlename, titleleft, titleright }) {
 
 
-
   return (
     <header>
       <div className="status_bar">

@@ -5,7 +5,7 @@ import Users from '../components/Users'
 import { FaSearch, FaSlidersH } from "react-icons/fa"
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-import MyProfile from '../components/My'
+import My from '../components/My'
 function Friends({ userObj }) {
 
 
@@ -42,7 +42,7 @@ function Friends({ userObj }) {
           </div>
           <ul>
 
-            <MyProfile userObj={userObj} />
+            <My userObj={userObj} />
 
           </ul>
         </section>

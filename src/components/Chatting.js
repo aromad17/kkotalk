@@ -34,6 +34,14 @@ function Chatting({ userObj }) {
   useEffect(() => {
     getComments();
 
+    const q = query(collection(db, "talks"), where("userName.name", "==", name), orderBy("createdAt", "asc"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const newArray = [];
+      querySnapshot.forEach((doc) => {
+        newArray.push({ id: doc.id, ...doc.data() });
+      });
+      setChats(newArray);
+    });
   }, [])
 
   const getComments = async () => {
@@ -65,19 +73,6 @@ function Chatting({ userObj }) {
       console.error("Error adding document: ", e);
     }
   }
-
-
-
-  useEffect(() => {
-    const q = query(collection(db, "talks"), where("userName.name", "==", name), orderBy("createdAt", "asc"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const newArray = [];
-      querySnapshot.forEach((doc) => {
-        newArray.push({ id: doc.id, ...doc.data() });
-      });
-      setChats(newArray);
-    });
-  }, []);
 
   const previewBg = document.querySelector(".preview_bg");
 

@@ -12,6 +12,10 @@
     background: transparent;
   }
 
+  button{
+    cursor: pointer;
+  }
+
 .title_bar>.left_item>a {
   opacity: 1;
   font-size: 20px;
@@ -82,7 +86,6 @@ main {
       width:30px;
       height: 30px;
       background:#730D28;
-      cursor: pointer;
       
 
       svg{
@@ -121,6 +124,61 @@ main {
   height: 100px;
   margin-left: -50px;
 
+  .photo_bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .photo_cover{
+      z-index: 3;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      width:100%;
+      height:100%;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+    }
+
+    label{
+      z-index: 5;
+      position: absolute;
+      bottom:-25%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      width:80px;
+      height:30px;
+      line-height: 30px;
+      text-align: center;
+      font-size:10px;
+      background-color: #a6374b;
+      border-radius: 10px;
+      font-weight: bold;
+      color:#fff;
+      letter-spacing: 1px;
+    }
+
+    input{
+      display: none;
+    }
+
+    img{
+      z-index:1;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      width:100%;
+      height:100%;
+    }
+
+    button{
+      right:-25%;
+    }
+  }
+
+
   img{
     width:100%;
     height:100%;
@@ -155,6 +213,33 @@ form{
   align-items: center;
   margin-top: 45px;
 
+  .detail_profile_message{
+    margin:20px 0 25px;
+    text-align: center;
+  }
+
+  .message_wrap{
+    position: relative;
+
+      .detail_profile_message{
+        margin:20px 0 25px;
+        border:1px solid #000;
+
+      }
+
+        button{
+        position: absolute;
+        top:46%;
+        right:-20%;
+        transform: translateY(-50%);
+        background:beige;
+        border-radius: 50%;
+        padding: 5px;
+        border:none;
+
+        }
+    
+    }
   .detail_profile_name{
     position: relative;
     font-size: 16px;
@@ -169,7 +254,8 @@ form{
       height:20px;
       padding: 0;
       border:none;
-      
+      border-radius: 50%;
+      background-color: beige;
       svg{
         width:0.9rem;
         height:0.9rem;
@@ -177,17 +263,36 @@ form{
     }
   }
 
-  .detail_profile_email{
+  .edit_name{
+    position: relative; 
+
+    input{
+      border:1px solid #513736;
+      border-radius: 10px;
+    }
+
+    button{
+      position: absolute;
+      top:46%;
+      right: -20%;
+      border:none;
+      transform: translateY(-50%);
+      background: beige;
+    }
+  }
+
+  .detail_profile_message{
     position: relative;
+
     button{
       position: absolute;
       right: -25px;
-      top:3px;
+      top:0px;
       width:20px;
       height:20px;
       padding: 0;
       border:none;
-      
+      background: beige;
       svg{
         width:0.9rem;
         height:0.9rem;

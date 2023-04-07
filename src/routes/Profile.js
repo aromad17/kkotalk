@@ -11,8 +11,9 @@ function Profile() {
   const { pic, name, id } = location.state;
 
   const navigate = useNavigate();
+  
   if (location.state === undefined) {
-    navigate('/'); // 홈으로 이동 즉 리다이렉트가 가능하다
+    navigate(-1); // 홈으로 이동 즉 리다이렉트가 가능하다
   }
 
   return (

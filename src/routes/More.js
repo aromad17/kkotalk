@@ -17,8 +17,6 @@ function More() {
 
     authService.signOut();
     navigate('/');
-
-
   }
 
 
