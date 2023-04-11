@@ -6,7 +6,7 @@ import Nav from './Nav'
 import CommentMy from './CommentMy'
 import CommentOtherInfo from './CommentOtherInfo'
 import CommentOtherChat from './CommentOtherChat'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaChevronLeft, FaSmile, FaMicrophone, FaPlusSquare } from "react-icons/fa"
 import { GrSend } from "react-icons/gr";
 import { collection, addDoc, query, orderBy, onSnapshot, where } from "firebase/firestore";
@@ -17,13 +17,14 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
-
-
-
-
-
 function Chatting({ userObj }) {
 
+  const navigate = useNavigate();
+
+  const lastPage = (e) => {
+    e.preventDefault();
+    navigate(-1);
+  }
 
   const [Comments, setComments] = useState([]);
   const [chat, setChat] = useState('');
@@ -51,7 +52,7 @@ function Chatting({ userObj }) {
 
   const location = useLocation();
   // useLocation으로 전달받은 스테이트를 가져올수있다.
-  const { name, pic } = location.state;
+  const { name, pic, bg, msg } = location.state;
 
   const onChange = (e) => {
     const { target: { value } } = e;
@@ -139,6 +140,7 @@ function Chatting({ userObj }) {
         titleleft={<FaChevronLeft />}
         titlename={name}
         titleright={" "}
+        lastPage={lastPage}
       />
 
       <hr />
@@ -163,8 +165,7 @@ function Chatting({ userObj }) {
 
         <div className="chat_box other">
 
-          <CommentOtherInfo
-            state={{ name, pic }}
+          <CommentOtherInfo state={{ name, pic, bg, msg }}
           />
 
           {Comments.map((comment, idx) =>
@@ -186,7 +187,7 @@ function Chatting({ userObj }) {
             />
           )}
 
-          <span className="chat_time"><span>15</span>:<span>39</span></span>
+          
         </div>
 
 

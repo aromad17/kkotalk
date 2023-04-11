@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import user from '../data/user.json'
 import '../styles/friends.scss'
 import Users from '../components/Users'
@@ -6,19 +6,28 @@ import { FaSearch, FaSlidersH } from "react-icons/fa"
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import My from '../components/My'
+import { useNavigate } from 'react-router-dom'
 function Friends({ userObj }) {
 
+  const [friendsCount, setFriendsCount] = useState(0);
 
-  console.log("userObj->", userObj);
+  const navigate = useNavigate();
 
+
+
+  useEffect(() => {
+    const count = document.querySelectorAll(".friends_list li").length;
+    setFriendsCount(count);
+  }, []);
 
 
   return (
-    <>
+    <div className='friends_wrap'>
       <Header
         titleleft={"Manage"}
         titlename={"Friends"}
         titleright={<FaSlidersH />}
+        friendsCount={friendsCount}
       />
 
 
@@ -60,6 +69,7 @@ function Friends({ userObj }) {
                 name={users1.name}
                 pic={users1.img}
                 msg={users1.message}
+                bg={users1.bg}
               />
             ))
             }
@@ -70,7 +80,7 @@ function Friends({ userObj }) {
 
       </main>
       <Nav />
-    </>
+    </div>
   )
 }
 

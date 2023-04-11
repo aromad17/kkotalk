@@ -16,11 +16,18 @@ a {
 }
 
 .empty {
-  img{
   display: block;
   width: 40px;
   height: 40px;
   margin: 5px 5px;
+  border-radius: 50%;
+  background: url("../images/empty.jpg") no-repeat center;
+  background-size:cover;
+
+  img{
+  display: block;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   }
 }

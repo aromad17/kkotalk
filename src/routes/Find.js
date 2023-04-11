@@ -6,7 +6,7 @@ import Header from '../components/Header';
 
 function Find() {
   return (
-    <div>
+    <div className='find_wrap'>
       <Header
         titleleft={"Edit"}
         titlename={"Find"}

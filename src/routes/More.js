@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { authService } from '../fbase';
 
 
-function More() {
+function More({ userObj }) {
 
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ function More() {
 
 
   return (
-    <div>
+    <div className='more_wrap'>
       <Header
         titleleft={" "}
         titlename={"More"}
@@ -36,13 +36,9 @@ function More() {
         {/* <!-- user_info --> */}
         <section className="user_info">
           <h2 className="blind">사용자정보</h2>
-          {user.My.map((user1, idx) =>
-          (<MoreMy
-            pic={user1.img}
-            name={user1.name}
-            email={user1.email}
-          />))
-          }
+
+          <MoreMy userObj={userObj} />
+
           <span className="chat_img" onClick={onLogOut}><a href="#"><FaSignOutAlt /></a></span>
         </section>
         {/* <!-- //user_info --> */}

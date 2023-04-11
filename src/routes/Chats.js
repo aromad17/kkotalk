@@ -22,7 +22,7 @@ function Chats() {
   }
 
   return (
-    <div>
+    <div className='chats_wrap'>
       <Header
         titleleft={"Edit"}
         titlename={"Chats"}
@@ -52,6 +52,8 @@ function Chats() {
                 name={user.name}
                 title={user.message}
                 pic={user.img}
+                bg={user.bg}
+                msg={user.message}
               />
             )}
           </ul>

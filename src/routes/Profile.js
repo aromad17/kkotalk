@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/profile.scss'
-import { FaTimes, FaUser, FaComment, FaPen } from "react-icons/fa"
+import { FaTimes, FaUser } from "react-icons/fa"
 import Header from '../components/Header'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
@@ -8,12 +8,15 @@ function Profile() {
 
   const location = useLocation();
   // useLocation으로 전달받은 스테이트를 가져올수있다.
-  const { pic, name, id } = location.state;
+  const { pic, name, id, bg, msg } = location.state;
 
   const navigate = useNavigate();
-  
   if (location.state === undefined) {
     navigate(-1); // 홈으로 이동 즉 리다이렉트가 가능하다
+  }
+  const lastPage = (e) => {
+    e.preventDefault();
+    navigate(-1);
   }
 
   return (
@@ -24,12 +27,13 @@ function Profile() {
         titleleft={<FaTimes />}
         titlename={" "}
         titleright={<FaUser />}
+        lastPage={lastPage}
       />
       {/* <!-- //header --> */}
       < hr />
       {/* < !--main --> */}
       <main>
-        <section className="background">
+        <section className="background" style={{ backgroundImage: `url(${bg})` }}>
           <h2 className="blind">My profile background image</h2>
         </section>
 
@@ -39,29 +43,22 @@ function Profile() {
           </div>
           <div className="detail_profile_cont">
             <span className="detail_profile_name">{name}</span>
-            <input type="mail" className="profile_email" placeholder="userId@naver.com" />
+            <span className='detail_profile_message'>
+              {msg}
+            </span>
             <ul className="detail_profile_menu">
               {/* <!-- my chatroom --> */}
               <li>
-                <Link to='/chatting' state={{ name, pic, id }}>
+                <Link to='/chatting' state={{ name, pic, id, bg, msg }}>
                   <span className="icon">
-                    <FaComment />
+
                   </span>
                   My Chatroom
                 </Link>
               </li>
               {/* <!-- //my chatroom --> */}
 
-              {/* <!-- Edit Profile --> */}
-              <li>
-                <a href="#">
-                  <span className="icon">
-                    <FaPen />
-                  </span>
-                  Eidt Profile
-                </a>
-              </li>
-              {/* <!-- //Edit Profile --> */}
+
             </ul>
 
           </div>
@@ -69,9 +66,8 @@ function Profile() {
       </main>
       {/* <!-- //main --> */}
 
-    </div>
+    </div >
   )
 }
 
 export default Profile
-

@@ -1,11 +1,12 @@
 import React from 'react'
 import { FaPlane, FaBluetoothB, FaWifi, FaBatteryThreeQuarters, FaEllipsisH } from "react-icons/fa"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import '../styles/header.scss'
 import { authService } from '../fbase';
 
-function Header({ titlename, titleleft, titleright }) {
+function Header({ titlename, titleleft, titleright,friendsCount, lastPage }) {
 
+  
 
   return (
     <header>
@@ -22,8 +23,15 @@ function Header({ titlename, titleleft, titleright }) {
         </div>
       </div>
       <div className="title_bar">
-        <h1>{titlename}</h1>
-        <div className="left_item"><Link to="/">{titleleft}</Link></div>
+        <h1>
+          {titlename}&nbsp; 
+          {friendsCount && <span>{friendsCount}</span>}
+        </h1>
+        { lastPage ? 
+        <div className="left_item" onClick={lastPage}>{titleleft}</div> 
+        : 
+        <div className="left_item">{titleleft}</div> }
+
         <div className="right_item"><a href="#">{titleright}</a></div>
       </div>
     </header >

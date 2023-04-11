@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-function Users({ key, pic, name, msg, id }) {
+function Users({ key, pic, name, msg, id, bg }) {
   return (
     <li key={key}>
-      <Link to={'/profile'} state={{ pic, name, msg, id }}>
+      <Link to={'/profile'} state={{ pic, name, msg, id, bg }}>
         <span className="profile_img empty">
 
           <img src={pic} alt={pic} />
@@ -15,11 +15,6 @@ function Users({ key, pic, name, msg, id }) {
       </Link>
     </li>
 
-    // <>
-    //   <h1>No. {id}</h1>
-    //   <h2>Name : {name}</h2>
-    //   <img src={images} alt={name} />
-    // </>
   )
 }
 export default Users;

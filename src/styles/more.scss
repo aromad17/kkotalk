@@ -1,12 +1,15 @@
 @import url(./common.scss);
 
+div.more_wrap{
 
-
-
-main {
-  height: 85.8%;
-  padding-top: 64px;
-}
+  .tab_bar>ul>li:nth-child(4)>a{
+    color: #513736;
+  }
+  
+  main {
+    height: 85.8%;
+    padding-top: 64px;
+  }
 
 .user_info {
   display: flex;
@@ -195,33 +198,6 @@ main {
       background-size: cover;
     }
   }
+  
 }
-
-.tab_bar {
-  ul {
-    li:nth-child(4) {
-      a {
-        color: #513736;
-        } 
-      }
-
-      li:nth-child(2) {
-        a {
-          color: #c0c1c2;
-          } 
-        }
-
-        li:nth-child(3) {
-          a {
-            color: #c0c1c2;
-            } 
-          }
-
-          li:nth-child(1) {
-            a {
-              color: #c0c1c2;
-              } 
-            }
-
-  }
 }

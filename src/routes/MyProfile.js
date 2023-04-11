@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/profile.scss'
-import { FaTimes, FaPen } from "react-icons/fa"
+import { FaTimes, FaPen, FaIdBadge } from "react-icons/fa"
 import Header from '../components/Header'
 import { IoCheckmarkSharp, IoCreateSharp } from "react-icons/io5";
 import { db, storage } from "../fbase";
@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { updateProfile } from "@firebase/auth";
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
 import { addDoc, collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function MyProfile({ userObj }) {
@@ -23,6 +24,14 @@ function MyProfile({ userObj }) {
   const [newName, setNewName] = useState("")
   const [MessageEdit, setMessageEdit] = useState(false);
   const [newMessage, setNewMessage] = useState("");
+  const navigate = useNavigate();
+
+  const lastPage = (e) => {
+    e.preventDefault();
+    navigate(-1);
+  }
+
+
 
   const onProfileToggle = () => {
     setEditing((prev) => !prev)
@@ -118,6 +127,12 @@ function MyProfile({ userObj }) {
     e.preventDefault();
 
     try {
+
+      const now = new Date(); // 현재 시간 가져오기
+      const year = now.getFullYear(); // 연도
+      const month = now.getMonth() + 1; // 월
+      const date = now.getDate(); // 일
+
       let bgUrl = "";
       const storageRef = ref(storage, `${userObj.uid}/${uuidv4()}`);
       //내 파이어베이스 스토리지에 uuidv4를 사용하여 랜덤한 경로를 생성
@@ -129,6 +144,11 @@ function MyProfile({ userObj }) {
         userId: userObj.uid,
         bgUrl,
         createdAt: Date.now(),
+        nowDate: {
+          year,
+          month,
+          date,
+        },
       });
       setNewBg('');
     } catch (error) {
@@ -173,7 +193,6 @@ function MyProfile({ userObj }) {
         statusMessage: newMessage,
         createdAt: Date.now(),
       });
-      setNewMessage('');
     } catch (error) {
       console.log("에러남");
     }
@@ -218,6 +237,10 @@ function MyProfile({ userObj }) {
     });
 
     return messageUnsubscribe;
+
+
+
+
   }, []);
 
   console.log(newMessage.statusMessage);
@@ -225,13 +248,16 @@ function MyProfile({ userObj }) {
   return (
     <div className='profile_wrap'>
 
-      {/* < !--header --> */}
       <Header
         titleleft={<FaTimes />}
         titlename={" "}
-        titleright={" "}
+        titleright={
+          <Link to="/gallery">
+            <FaIdBadge />
+          </Link>
+        }
+        lastPage={lastPage}
       />
-      {/* <!-- //header --> */}
       < hr />
       {/* < !--main --> */}
       <main>
@@ -308,13 +334,16 @@ function MyProfile({ userObj }) {
                 {nameEdit ?
                   <>
                     <div className='edit_name'>
-                      <input type="text" placeholder={userObj.displayName} value={newName} onChange={onNameChange} />
+                      <input type="text" placeholder="새 이름을 입력해주세요" value={newName} onChange={onNameChange} />
                       <button onClick={onNameSubmit}><IoCheckmarkSharp /></button>
                     </div>
                   </>
                   :
                   <>
-                    <span className="detail_profile_name">{userObj.displayName}
+                    <span className="detail_profile_name">{userObj.displayName ?
+                      userObj.displayName
+                      : "나"
+                    }
                       <button onClick={onNameToggle}><IoCreateSharp /></button>
                     </span>
                   </>
@@ -347,8 +376,8 @@ function MyProfile({ userObj }) {
                   <li>
                     <a href="#">
                       <button className="profile_modify" onClick={onProfileToggle}>
-                        <span className="icon">
-                          <FaPen />
+                        <span className="modify_icon">
+
                         </span>
                         적용
                       </button>
@@ -411,7 +440,9 @@ function MyProfile({ userObj }) {
                   <img src={userObj.photoURL} alt=" " />
                 </div>
                 <div className="detail_profile_cont">
-                  <span className="detail_profile_name">{userObj.displayName}</span>
+                  <span className="detail_profile_name">{userObj.displayName ?
+                    userObj.displayName : "나"
+                  }</span>
                   <span className='detail_profile_message'>
                     {newMessage ?
 
@@ -425,8 +456,8 @@ function MyProfile({ userObj }) {
                     <li>
                       <a href="#">
                         <button onClick={onProfileToggle}>
-                          <span className="icon">
-                            <FaPen />
+                          <span className="modify_icon">
+
                           </span>
                           프로필 수정
                         </button>

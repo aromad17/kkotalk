@@ -1,5 +1,13 @@
 @import url(./common.scss);
 
+div.friends_wrap{
+
+  .tab_bar>ul>li:nth-child(1)>a{
+    color: #513736;
+  }
+  
+
+
 main {
   height: 85.8%;
   padding-top: 64px;
@@ -56,11 +64,35 @@ main {
 
   
     }
+
+    ul{
+      display: flex;
+      flex-direction: column;
+      li {
+        padding:5px 5px;
+
+        .profile_img{
+         margin-right: 8px; 
+        }
+
+
+        a{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 16px; 
+        }
+      }
+    }
+
+
+
+
     .friends_list {
       display: flex;
       flex-direction: column;
-      padding-bottom:55px;
       li {
+        padding:5px 5px;
         a{
           display: flex;
           flex-direction: row;
@@ -91,32 +123,4 @@ main {
 }
 
 }
-
-.tab_bar {
-  ul {
-    li:nth-child(1) {
-      a {
-        color: #513736;
-        } 
-      }
-
-      li:nth-child(2) {
-        a {
-          color: #c0c1c2;
-          } 
-        }
-
-        li:nth-child(3) {
-          a {
-            color: #c0c1c2;
-            } 
-          }
-
-          li:nth-child(4) {
-            a {
-              color: #c0c1c2;
-              } 
-            }
-
-  }
 }

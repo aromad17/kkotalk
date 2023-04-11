@@ -35,9 +35,21 @@ function My({ userObj }) {
     <li>
       <Link to={'/myprofile'}>
         <span className="profile_img empty">
-          <img src={userObj.photoURL} alt="내 프로필 이미지" />
+          {userObj.photoURL ? <img src={userObj.photoURL} alt="내 프로필 이미지" />
+            : " "
+          }
         </span>
-        <span className="profile_name">{userObj.displayName}</span>
+
+        <span className="profile_name">
+          {userObj.displayName ?
+            userObj.displayName
+            : "나"
+          }
+        </span>
+
+
+
+
         <span className="profile_messages">
           {newMessage ?
 

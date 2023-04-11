@@ -2,7 +2,12 @@
 
 
 div.chatting{
-overflow-x: hidden;
+  height:100%;
+  overflow-x: hidden;
+
+  .tab_bar>ul>li:nth-child(2)>a{
+    color: #513736;
+  }
 
 .preview_bg{
     z-index:500;
@@ -20,12 +25,12 @@ overflow-x: hidden;
     top:50%;
     transform: translate(-50%,-50%);
     color:#f2f2f2;
+
     img{
       position: absolute;
       left:50%;
       transform: translateX(-50%);
     }
-
   }
 
 
@@ -88,14 +93,16 @@ header {
 /* main */
 
 main {
-  display: flex;
+  position: relative;
+  display:flex;
   flex-direction: column;
-  height:   100%;
+  min-height: 100%;
+  height: auto;
   padding-top: 64px;
   padding-bottom:100px;
-  background: #A6374B;
-
-
+  background: #A6374B url("../images/chat_bg.png") no-repeat center center;
+  background-attachment: fixed;
+  background-size: 50%;
 
 .date_info {
   opacity: 0.5;
@@ -134,6 +141,7 @@ main {
   align-items: flex-end;
   max-width: 240px;
   margin-right: 10px;
+
 
   .chat {
     word-break: break-all;

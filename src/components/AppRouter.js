@@ -8,6 +8,7 @@ import More from '../routes/More';
 import Profile from '../routes/Profile';
 import Chatting from './Chatting';
 import MyProfile from '../routes/MyProfile';
+import MyGallery from './MyGallery';
 
 
 function AppRouter({ isLoggedIn, userObj }) {
@@ -23,10 +24,11 @@ function AppRouter({ isLoggedIn, userObj }) {
         )}
         <Route path="/chats" element={<Chats />} />
         <Route path="/find" element={<Find />} />
-        <Route path="/more" element={<More />} />
+        <Route path="/more" element={<More userObj={userObj} />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/chatting" element={<Chatting userObj={userObj} />} />
         <Route path="/myprofile" element={<MyProfile userObj={userObj} />} />
+        <Route path="/gallery" element={<MyGallery />} />
       </Routes>
     </BrowserRouter>
   )

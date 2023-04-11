@@ -70,7 +70,7 @@ function Auth() {
 
   return (
     <div className="auth_wrap">
-      <h1 className='logo'><FaCat /></h1>
+      <h1 className='logo'>로고</h1>
       <h2>{newAccount ? "회원 가입" : "로그인"} </h2>
       <div className='auth_form'>
         <form onSubmit={onSubmit}>
@@ -84,7 +84,7 @@ function Auth() {
           <button className='github_btn' name='github' onClick={onSocial}><FaGithub />Continue With GITHUB Account</button>
         </div>
         <span onClick={toggleAccount}>
-          {newAccount ? "! 이미 계정이 있다면 클릭하여 로그인하기 !" : "! 계정이 없다면 클릭하여 회원가입 !"}
+          {newAccount ? "| 이미 계정이 있다면 클릭하여 로그인하기 |" : "| 계정이 없다면 클릭하여 회원가입 |"}
         </span>
       </div>
     </div>
