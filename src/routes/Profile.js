@@ -53,7 +53,7 @@ function Profile() {
                   <span className="icon">
 
                   </span>
-                  My Chatroom
+                  채팅
                 </Link>
               </li>
               {/* <!-- //my chatroom --> */}

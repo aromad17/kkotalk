@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import LastChat from './LastChat';
 import ChatTime from './ChatTime';
 
-function Chatfriend({ name, title, pic, bg, msg }) {
+function Chatfriend({ name, title, pic, bg, msg, userObj }) {
 
 
 
@@ -17,11 +17,13 @@ function Chatfriend({ name, title, pic, bg, msg }) {
           <span className="chats_name">{name}</span>
           <LastChat
             name={name}
+            userObj={userObj}
           />
 
         </span>
         <ChatTime
           name={name}
+          userObj={userObj}
         />
       </Link>
     </li>

@@ -3,15 +3,14 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../fbase';
 import { FaCameraRetro } from "react-icons/fa";
 
-function LastChat({ name }) {
+function LastChat({ name, userObj }) {
 
   const [lastChat, setLastChat] = useState('');
   const [lastPic, setLastPic] = useState('');
 
 
   useEffect(() => {
-    const q = query(collection(db, "talks"), where("userName.name", "==", name), orderBy("createdAt", "asc"));
-
+    const q = query(collection(db, "talks"), where("userName.name", "==", name), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const newArray = [];
       const picArray = [];

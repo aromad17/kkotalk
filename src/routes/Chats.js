@@ -9,7 +9,7 @@ import Header from '../components/Header';
 import Nav from '../components/Nav';
 import { useLocation } from 'react-router-dom';
 
-function Chats() {
+function Chats({ userObj }) {
 
   const [friends, setFriends] = useState([]);
   useEffect(() => {
@@ -54,6 +54,7 @@ function Chats() {
                 pic={user.img}
                 bg={user.bg}
                 msg={user.message}
+                userObj={userObj}
               />
             )}
           </ul>

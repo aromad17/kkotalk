@@ -32,19 +32,6 @@ function CommentMy2(props) {
     setNowDate(now.toLocaleTimeString('ko-KR', { timeZone: 'Asia/Seoul', hour12: false, hour: '2-digit', minute: '2-digit' }));
   }, [createdAt])
 
-
-  // const onMouseEnter = () => {
-  //   for(let el of chatBtns){
-  //     el.style.display = "block";
-  //   }
-  // }
-
-  // const onMouseLeave = () => {
-  //   for(let el of chatBtns){
-  //     el.style.display = "none";
-  //   }
-  // }
-
   const onChange = (e) => {
     const { target: { value } } = e;
     setEditTalk(value)

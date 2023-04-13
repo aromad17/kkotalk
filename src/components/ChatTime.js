@@ -2,14 +2,14 @@ import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestor
 import React, { useEffect, useState } from 'react'
 import { db } from '../fbase';
 
-function ChatTime({ name }) {
+function ChatTime({ name, userObj }) {
 
   const [lastChatTime, setLastChatTime] = useState('');
   const [nowDate, setNowDate] = useState(lastChatTime);
 
 
   useEffect(() => {
-    const q = query(collection(db, "talks"), where("userName.name", "==", name), orderBy("createdAt", "asc"));
+    const q = query(collection(db, "talks"), where("userName.name", "==", name), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const newArray = [];

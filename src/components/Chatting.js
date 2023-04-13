@@ -35,7 +35,7 @@ function Chatting({ userObj }) {
   useEffect(() => {
     getComments();
 
-    const q = query(collection(db, "talks"), where("userName.name", "==", name), orderBy("createdAt", "asc"));
+    const q = query(collection(db, "talks"), where("userName.name", "==", name), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const newArray = [];
       querySnapshot.forEach((doc) => {
@@ -68,6 +68,7 @@ function Chatting({ userObj }) {
         userName: { name },
         chat,
         createdAt: Date.now(),
+        userId: userObj.uid
       });
       setChat('');
     } catch (e) {
@@ -113,7 +114,8 @@ function Chatting({ userObj }) {
         userName: { name },
         createdAt: Date.now(),
         creatorId: userObj.uid,
-        postUrl
+        postUrl,
+        userId: userObj.uid
       });
     } catch (e) {
       console.error("Error adding document: ", e);
@@ -187,7 +189,7 @@ function Chatting({ userObj }) {
             />
           )}
 
-          
+
         </div>
 
 
