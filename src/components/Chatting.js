@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../styles/chatting.scss'
 import Header from './Header'
 import Nav from './Nav'
@@ -33,8 +33,8 @@ function Chatting({ userObj }) {
 
 
   useEffect(() => {
+    
     getComments();
-
     const q = query(collection(db, "talks"), where("userName.name", "==", name), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const newArray = [];
@@ -43,7 +43,15 @@ function Chatting({ userObj }) {
       });
       setChats(newArray);
     });
-  }, [])
+    
+  
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+  
+
+
 
   const getComments = async () => {
     const { data: comment } = await axios.get('https://jsonplaceholder.typicode.com/comments?_limit=3');

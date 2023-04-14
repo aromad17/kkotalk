@@ -8,7 +8,7 @@ import "firebase/storage";
 import { v4 as uuidv4 } from 'uuid';
 import { updateProfile } from "@firebase/auth";
 import { getDownloadURL, ref, uploadString } from 'firebase/storage';
-import { addDoc, collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { addDoc, collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import { Link, useNavigate } from 'react-router-dom';
 
 
@@ -205,7 +205,8 @@ function MyProfile({ userObj }) {
 
 
   useEffect(() => {
-    const q = query(collection(db, "profileImg"), orderBy("createdAt", "asc"));
+    const q = query(collection(db, "profileImg"),where("userId","==",userObj.uid),orderBy("createdAt", "asc"));
+    
     const m = query(collection(db, "message"), orderBy("createdAt", "asc"));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -251,11 +252,15 @@ function MyProfile({ userObj }) {
       <Header
         titleleft={<FaTimes />}
         titlename={" "}
-        titleright={
-          <Link to="/gallery">
+        titleright={(
+          <Link
+            to={{
+              pathname: '/gallery',
+            }}
+          >
             <FaIdBadge />
           </Link>
-        }
+        )}
         lastPage={lastPage}
       />
       < hr />

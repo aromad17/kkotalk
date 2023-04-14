@@ -9,7 +9,7 @@ function Chatfriend({ name, title, pic, bg, msg, userObj }) {
 
   return (
     <li>
-      <Link to={'/chatting'} href="#" state={{ name, pic, bg, msg }}>
+      <Link to={'/chatting'} state={{ name, pic, bg, msg }}>
         <span className="chats_img empty">
           <img src={pic} alt={title} />
         </span>

@@ -12,14 +12,14 @@
       {
         "id": 1,
         "name": "Brianna",
-        "message": "Time, look where we are and what we've been through",
+        "message": "Time, look where we are",
         "img": "https://i.pinimg.com/236x/27/0c/51/270c515a26bb02c232bf0c1cc906ddbb.jpg",
         "bg": "https://i.pinimg.com/236x/43/2b/25/432b251569b78cee98c4c759444a5577.jpg"
       },
       {
         "id": 2,
         "name": "Abraham",
-        "message": "sakdjlnsbvnkzsbkjfnbsdkjfnbskd",
+        "message": "weather is good",
         "img": "https://i.pinimg.com/236x/2f/07/67/2f07672f429d6f806473929a3acf239e.jpg",
         "bg": "https://i.pinimg.com/564x/5f/55/c1/5f55c1b4a025c31d8507db2a3fc0c93b.jpg"
       },
@@ -47,7 +47,7 @@
       {
         "id": 6,
         "name": "Wallace",
-        "message": "닭갈비",
+        "message": "김치찌개",
         "img": "https://i.pinimg.com/236x/57/b1/6c/57b16cc2ef3c2b7c9609bf260deef7de.jpg",
         "bg": "https://i.pinimg.com/236x/c9/27/d7/c927d7e5aab5b74f957f01da6ce09440.jpg"
       },

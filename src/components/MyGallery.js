@@ -1,12 +1,12 @@
-import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { db } from '../fbase';
 import Header from './Header'
 import '../styles/mygallery.scss'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaAngleLeft } from "react-icons/fa"
 
-function MyGallery() {
+function MyGallery({userObj}) {
 
   const [photoList, setPhotList] = useState([]);
 
@@ -17,7 +17,7 @@ function MyGallery() {
     navigate(-1);
   }
   useEffect(() => {
-    const q = query(collection(db, "profileImg"), orderBy("createdAt", "desc"));
+    const q = query(collection(db, "profileImg"), where("userId", "==", userObj.uid), orderBy("createdAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const profileImgs = [];
@@ -25,11 +25,8 @@ function MyGallery() {
         profileImgs.push({ id: doc.id, ...doc.data() });
         setPhotList(profileImgs);
       });
-
-
     });
   }, [])
-
 
   return (
     <>
@@ -49,7 +46,7 @@ function MyGallery() {
             <span className='gallery_name'>나의 배경 사진</span>
             <div className='gallery_cont'>
 
-              <span className='gallery_time'>
+              <span className='gallery_time' key={idx}>
                 {item.nowDate.year}년 {item.nowDate.month}월 {item.nowDate.date}일
               </span>
               <div className='gallery_bg'>
