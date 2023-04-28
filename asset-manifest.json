@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kkotalk/static/css/main.0ec6cd51.css",
-    "main.js": "/kkotalk/static/js/main.2f52b7c5.js",
+    "main.css": "/kkotalk/static/css/main.02ef15b1.css",
+    "main.js": "/kkotalk/static/js/main.426326bb.js",
     "static/media/bg_default.png": "/kkotalk/static/media/bg_default.1e0ff20c1c12f28b9e5e.png",
     "static/media/kakaofriends.png": "/kkotalk/static/media/kakaofriends.84375bb9f89d79ccd760.png",
     "static/media/path.png": "/kkotalk/static/media/path.7d00edf73f07bdcecc6d.png",
@@ -9,11 +9,11 @@
     "static/media/chat_bg.png": "/kkotalk/static/media/chat_bg.2bad98f9ac95cb9e8f75.png",
     "static/media/chatIcon.png": "/kkotalk/static/media/chatIcon.57446d8763585cdaa9fd.png",
     "index.html": "/kkotalk/index.html",
-    "main.0ec6cd51.css.map": "/kkotalk/static/css/main.0ec6cd51.css.map",
-    "main.2f52b7c5.js.map": "/kkotalk/static/js/main.2f52b7c5.js.map"
+    "main.02ef15b1.css.map": "/kkotalk/static/css/main.02ef15b1.css.map",
+    "main.426326bb.js.map": "/kkotalk/static/js/main.426326bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ec6cd51.css",
-    "static/js/main.2f52b7c5.js"
+    "static/css/main.02ef15b1.css",
+    "static/js/main.426326bb.js"
   ]
 }
