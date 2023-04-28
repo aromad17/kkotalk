@@ -75,8 +75,6 @@ function MyProfile({ userObj }) {
     } catch (error) {
       console.log(error)
     }
-
-
   };
 
 
@@ -205,9 +203,9 @@ function MyProfile({ userObj }) {
 
 
   useEffect(() => {
-    const q = query(collection(db, "profileImg"),where("userId","==",userObj.uid),orderBy("createdAt", "asc"));
-    
-    const m = query(collection(db, "message"), orderBy("createdAt", "asc"));
+    const q = query(collection(db, "profileImg"), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
+
+    const m = query(collection(db, "message"), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const newArray = [];
@@ -379,14 +377,14 @@ function MyProfile({ userObj }) {
 
                 <ul className="detail_profile_menu">
                   <li>
-                    <a href="#">
+                    <Link href="#">
                       <button className="profile_modify" onClick={onProfileToggle}>
                         <span className="modify_icon">
 
                         </span>
                         적용
                       </button>
-                    </a>
+                    </Link>
                   </li>
                   {/* <!-- //Edit Profile --> */}
                 </ul>
@@ -459,14 +457,14 @@ function MyProfile({ userObj }) {
                   <ul className="detail_profile_menu">
                     {/* <!-- Edit Profile --> */}
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <button onClick={onProfileToggle}>
                           <span className="modify_icon">
 
                           </span>
                           프로필 수정
                         </button>
-                      </a>
+                      </Link>
                     </li>
                     {/* <!-- //Edit Profile --> */}
                   </ul>

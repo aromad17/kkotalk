@@ -1,14 +1,14 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import { db } from "../fbase";
 import { useState } from 'react';
 function My({ userObj }) {
   const [newMessage, setNewMessage] = useState("");
 
   useEffect(() => {
-    const m = query(collection(db, "message"), orderBy("createdAt", "asc"));
+    const m = query(collection(db, "message"), where("userId", "==", userObj.uid), orderBy("createdAt", "asc"));
 
     const messageUnsubscribe = onSnapshot(m, (querySnapshot) => {
       const messageArray = [];
@@ -35,8 +35,10 @@ function My({ userObj }) {
     <li>
       <Link to={'/myprofile'}>
         <span className="profile_img empty">
-          {userObj.photoURL ? <img src={userObj.photoURL} alt="내 프로필 이미지" />
-            : " "
+          {userObj.photoURL ? 
+          <img src={userObj.photoURL} alt="내 프로필 이미지" />
+            :
+           " "
           }
         </span>
 

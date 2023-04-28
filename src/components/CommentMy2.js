@@ -64,6 +64,7 @@ function CommentMy2(props) {
             <button onClick={toggleEditing}><IoCreateSharp /></button>
             <button onClick={onPicDelete}><IoTrashSharp /></button>
             <span className="chat">{chat}</span>
+            <span className="chat_time">{nowDate}</span>
           </div>
         )
       )}
@@ -72,9 +73,10 @@ function CommentMy2(props) {
         <div className="img_box">
           <button onClick={onPicDelete}><IoTrashSharp /></button>
           <img src={postUrl} alt='' />
+          
         </div>
       )}
-      <span className="chat_time">{nowDate}</span>
+
     </>
 
   )

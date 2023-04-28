@@ -153,6 +153,7 @@ main {
   .my_chat_box{
     display: flex;
     align-items: end;
+    position: relative;
 
     &:hover button{
       display: block;
@@ -204,10 +205,10 @@ main {
   }
   .chat_time {
     position: absolute;
-    left: -50px;
-    bottom: -5px;
+    left: -40px;
+    bottom: 0px;
     width: 50px;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
