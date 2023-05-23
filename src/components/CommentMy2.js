@@ -41,7 +41,7 @@ function CommentMy2(props) {
     e.preventDefault();
     const updateTalkRef = doc(db, "talks", `${id}`);
     await updateDoc(updateTalkRef, {
-      text: editTalk,
+      chat: editTalk,
       createdAt: Date.now(),
     })
     setEditing(false)
@@ -72,8 +72,8 @@ function CommentMy2(props) {
       {postUrl && (
         <div className="img_box">
           <button onClick={onPicDelete}><IoTrashSharp /></button>
-          <img src={postUrl} alt='' />
-          
+          <img src={postUrl} alt=' ' />
+
         </div>
       )}
 
