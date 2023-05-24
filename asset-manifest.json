@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kkotalk/static/css/main.02ef15b1.css",
-    "main.js": "/kkotalk/static/js/main.6ccfcbe7.js",
+    "main.js": "/kkotalk/static/js/main.ebc70f8c.js",
     "static/media/bg_default.png": "/kkotalk/static/media/bg_default.1e0ff20c1c12f28b9e5e.png",
     "static/media/kakaofriends.png": "/kkotalk/static/media/kakaofriends.84375bb9f89d79ccd760.png",
     "static/media/path.png": "/kkotalk/static/media/path.7d00edf73f07bdcecc6d.png",
@@ -10,10 +10,10 @@
     "static/media/chatIcon.png": "/kkotalk/static/media/chatIcon.57446d8763585cdaa9fd.png",
     "index.html": "/kkotalk/index.html",
     "main.02ef15b1.css.map": "/kkotalk/static/css/main.02ef15b1.css.map",
-    "main.6ccfcbe7.js.map": "/kkotalk/static/js/main.6ccfcbe7.js.map"
+    "main.ebc70f8c.js.map": "/kkotalk/static/js/main.ebc70f8c.js.map"
   },
   "entrypoints": [
     "static/css/main.02ef15b1.css",
-    "static/js/main.6ccfcbe7.js"
+    "static/js/main.ebc70f8c.js"
   ]
 }
