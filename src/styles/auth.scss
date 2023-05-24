@@ -89,6 +89,8 @@ div.auth_wrap{
         background: #8C5946;
         padding:10px;
       }
+
+
    }
 
    div{
@@ -124,7 +126,19 @@ div.auth_wrap{
    span{
     font-weight: 600;
     font-size:14px;
-    color:#ccc;
+    font-weight: 600;
+    background: #ccc;
+    color:#A6374B;
+    border: 1px solid #ccc;
+    padding:10px;
+    cursor: pointer;
+    transition: all 0.2s linear 0s;
+    border-radius: 10px;
+    &:hover{
+    background: #A6374B;
+    color:#CCC;
+    
+    }
    }
 
   }

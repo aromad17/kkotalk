@@ -84,7 +84,7 @@ function Auth() {
           <button className='github_btn' name='github' onClick={onSocial}><FaGithub />Continue With GITHUB Account</button>
         </div>
         <span onClick={toggleAccount}>
-          {newAccount ? "| 이미 계정이 있다면 클릭하여 로그인하기 |" : "| 계정이 없다면 클릭하여 회원가입 |"}
+          {newAccount ? "이미 계정이 있다면 클릭하여 로그인하기" : "계정이 없다면 클릭하여 회원가입"}
         </span>
       </div>
     </div>
