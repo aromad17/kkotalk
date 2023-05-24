@@ -41,8 +41,7 @@ function CommentMy2(props) {
     e.preventDefault();
     const updateTalkRef = doc(db, "talks", `${id}`);
     await updateDoc(updateTalkRef, {
-      chat: editTalk,
-      createdAt: Date.now(),
+      chat: editTalk
     })
     setEditing(false)
   }
