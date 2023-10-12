@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AppRouter from "./components/AppRouter";
 import { authService } from "./fbase"
-
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
