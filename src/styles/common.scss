@@ -1,0 +1,33 @@
+/* COMMON */
+@import url(./reset.css);
+
+
+body {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+a {
+  &:link, &:visited, &:hover.a:focus, &:active {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.empty {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 5px 5px;
+  border-radius: 50%;
+  background: url("../images/empty.jpg") no-repeat center;
+  background-size:cover;
+
+  img{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  }
+}

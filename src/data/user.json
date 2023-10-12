@@ -1,0 +1,83 @@
+  {
+    "My": [
+      {
+        "id": 1,
+        "name": "Kendrick",
+        "message": "We are back to laughing, crying, living, loving",
+        "img": "https://i.pinimg.com/736x/74/14/0c/74140c8c7188b053f376c67945ec1654.jpg",
+        "email": "777@naver.com"
+      }
+    ],
+    "Friends": [
+      {
+        "id": 1,
+        "name": "Brianna",
+        "message": "Time, look where we are",
+        "img": "https://i.pinimg.com/236x/27/0c/51/270c515a26bb02c232bf0c1cc906ddbb.jpg",
+        "bg": "https://i.pinimg.com/236x/43/2b/25/432b251569b78cee98c4c759444a5577.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Abraham",
+        "message": "weather is good",
+        "img": "https://i.pinimg.com/236x/2f/07/67/2f07672f429d6f806473929a3acf239e.jpg",
+        "bg": "https://i.pinimg.com/564x/5f/55/c1/5f55c1b4a025c31d8507db2a3fc0c93b.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Duncan",
+        "message": "good",
+        "img": "https://i.pinimg.com/236x/5b/f3/7a/5bf37ae970e001af543ed310772228a9.jpg",
+        "bg": "https://i.pinimg.com/236x/2e/a8/06/2ea8060cd21ba98472990ea95790489d.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Linney",
+        "message": "떡볶이",
+        "img": "https://i.pinimg.com/236x/f3/06/91/f306912c16f8c725cfcfd5d923e1897f.jpg",
+        "bg": "https://i.pinimg.com/236x/2b/d5/4b/2bd54b98471b39a017d145ab5e4a09df.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Natalie",
+        "message": "안녕하세요",
+        "img": "https://i.pinimg.com/236x/e2/90/d5/e290d5304d1a535417aaf6c9883c1d54.jpg",
+        "bg": "https://i.pinimg.com/236x/f0/82/3c/f0823c54bb92aec76f2959d88a0c42a5.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Wallace",
+        "message": "김치찌개",
+        "img": "https://i.pinimg.com/236x/57/b1/6c/57b16cc2ef3c2b7c9609bf260deef7de.jpg",
+        "bg": "https://i.pinimg.com/236x/c9/27/d7/c927d7e5aab5b74f957f01da6ce09440.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Lawrence",
+        "message": "ㅎ2ㅎ2",
+        "img": "https://i.pinimg.com/236x/9c/e3/f1/9ce3f1b2b969f96ed716162330b2e675.jpg",
+        "bg": "https://i.pinimg.com/236x/c2/73/3d/c2733df5ad0c044b4a633c16813b0015.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Kaylee",
+        "message": "별빛이 아름다운 이 밤에 ",
+        "img": "https://i.pinimg.com/236x/0f/de/19/0fde19094ff2f70c3a158aa33cef10af.jpg",
+        "bg": "https://i.pinimg.com/236x/9b/0a/23/9b0a23ac0817808ff976defd30077940.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Edward",
+        "message": "ㅇㅅㅇ",
+        "img": "https://i.pinimg.com/236x/67/ba/5b/67ba5bd5bd0bd2030f77e09cab8be079.jpg",
+        "bg": "https://i.pinimg.com/236x/c2/17/15/c21715a28dd208c113d92e096f8bf122.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Jasmine",
+        "message": "내 맘을 깨워 이른 꽃잎처럼 ",
+        "img": "https://i.pinimg.com/736x/7a/b8/21/7ab821a6006675cfe426f9b1d8d7e85a.jpg",
+        "bg": "https://i.pinimg.com/236x/79/b4/79/79b479d769e60a8f8fba976c1e9f2535.jpg"
+      }
+    ]
+  }
