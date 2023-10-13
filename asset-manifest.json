@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.449acd97.css",
-    "main.js": "/static/js/main.bc833d12.js",
+    "main.css": "/static/css/main.f9a20819.css",
+    "main.js": "/static/js/main.7da4e087.js",
     "static/media/bg_default.png": "/static/media/bg_default.1e0ff20c1c12f28b9e5e.png",
     "static/media/kakaofriends.png": "/static/media/kakaofriends.84375bb9f89d79ccd760.png",
     "static/media/path.png": "/static/media/path.7d00edf73f07bdcecc6d.png",
@@ -9,11 +9,11 @@
     "static/media/chat_bg.png": "/static/media/chat_bg.2bad98f9ac95cb9e8f75.png",
     "static/media/chatIcon.png": "/static/media/chatIcon.57446d8763585cdaa9fd.png",
     "index.html": "/index.html",
-    "main.449acd97.css.map": "/static/css/main.449acd97.css.map",
-    "main.bc833d12.js.map": "/static/js/main.bc833d12.js.map"
+    "main.f9a20819.css.map": "/static/css/main.f9a20819.css.map",
+    "main.7da4e087.js.map": "/static/js/main.7da4e087.js.map"
   },
   "entrypoints": [
-    "static/css/main.449acd97.css",
-    "static/js/main.bc833d12.js"
+    "static/css/main.f9a20819.css",
+    "static/js/main.7da4e087.js"
   ]
 }
