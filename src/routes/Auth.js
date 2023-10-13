@@ -10,7 +10,7 @@ function Auth() {
   const [password, setPassword] = useState("");
   const [newAccount, setNewAccount] = useState(false);
   const [error, setError] = useState('');
-
+  const [modal,setModal] = useState(false);
 
   const onChange = e => {
     // const {target:{name, value}} = e;
@@ -67,9 +67,26 @@ function Auth() {
 
   const toggleAccount = () => setNewAccount(prev => !prev);
 
+  const modalClick = () => setModal(prev => !prev);
 
   return (
+    <>
+
     <div className="auth_wrap">
+      {modal? 
+        <></>
+        :
+        <div className='joinGuide'>
+        <div className='joinModal'>
+          회원가입은 실제 존재하는 이메일이 아니라 이메일 형식만 갖춰 입력하여도 가입이 됩니다.
+           <button onClick={modalClick}>
+              확인
+           </button>
+          </div>
+      </div>
+
+      }
+      
       <h1 className='logo'>로고</h1>
       <h2>{newAccount ? "회원 가입" : "로그인"} </h2>
       <div className='auth_form'>
@@ -86,8 +103,10 @@ function Auth() {
         <span onClick={toggleAccount}>
           {newAccount ? "이미 계정이 있다면 클릭하여 로그인하기" : "계정이 없다면 클릭하여 회원가입"}
         </span>
+
       </div>
     </div>
+    </>
   )
 }
 
