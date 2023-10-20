@@ -1,48 +1,49 @@
 @import url(./common.scss);
-#root{
-  height:100%;
+
+#root {
+  height: 100%;
 }
 
-div.auth_wrap{
-  width:100%;
-  height:100%;
+div.auth_wrap {
+  width: 100%;
+  height: 100%;
   background: #A6374B;
 
-  div.joinGuide{
+  div.joinGuide {
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index:999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 
-    div.joinModal{
+    div.joinModal {
       position: absolute;
       left: 50%;
-      top:50%;
-      transform: translate(-50%,-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
       justify-content: center;
-      width:200px;
-      height: 120px;
+      width: 300px;
+      height: 180px;
       background-color: #fff;
-      padding:0 10px;
+      padding: 0 20px;
       box-sizing: border-box;
       text-align: justify;
-      font-size:0.5rem;
+      font-size: 0.8rem;
 
-      button{
+      button {
         position: absolute;
-        bottom:0;
-        left:0;
-        width:100%;
-        height:20%;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
         border: none;
         background: #000;
-        color:#fff;
-        font-size:0.5rem;
+        color: #fff;
+        font-size: 0.5rem;
         cursor: pointer;
       }
 
@@ -50,139 +51,142 @@ div.auth_wrap{
     }
 
   }
-  
-  h1{
-    position: absolute;    
-    top:25%;
+
+  h1 {
+    position: absolute;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 250px;
-    height:300px;
+    height: 300px;
     background: url("../images/bg_default.png") no-repeat center;
-    background-size:70%;
+    background-size: 70%;
     text-indent: -9999px;
     overflow: hidden;
 
-    svg{
-      width:100%;
-      height:100%;
+    svg {
+      width: 100%;
+      height: 100%;
 
-      path{
-        fill:#730D28;
+      path {
+        fill: #730D28;
       }
 
     }
 
   }
 
-  h2{
+  h2 {
     position: absolute;
-    top:45%;
+    top: 45%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    color:#F2F2F2;
-    font-size:32px;
+    transform: translate(-50%, -50%);
+    color: #F2F2F2;
+    font-size: 32px;
   }
 
-  div.auth_form{
+  div.auth_form {
     position: relative;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:350px;
+    width: 350px;
     transform: translateX(-50%);
 
-    *{
+    * {
       display: block;
     }
 
-    form{
+    form {
       display: flex;
       flex-direction: column;
-      align-items: center;  
-      padding:25px;
+      align-items: center;
+      padding: 25px;
       border: 1px solid #BFB3A8;
       box-sizing: border-box;
-      margin-bottom:30px;
+      margin-bottom: 30px;
 
-      input{
+      input {
         cursor: pointer;
       }
 
-      input.input_id, 
-      input.input_pw{
-        width:100%;
-        padding:10px;
+      input.input_id,
+      input.input_pw {
+        width: 100%;
+        padding: 10px;
         box-sizing: border-box;
-        font-size:16px;
+        font-size: 16px;
         font-weight: 400;
-        margin-bottom:10px;
+        margin-bottom: 10px;
       }
-      input.input_pw{
-        margin-bottom:20px;
+
+      input.input_pw {
+        margin-bottom: 20px;
       }
-      
-      input.input_submit{
-        width:200px;
+
+      input.input_submit {
+        width: 200px;
         outline: none;
-        border:none;
-        color:#F2F2F2;
+        border: none;
+        color: #F2F2F2;
         background: #8C5946;
-        padding:10px;
+        padding: 10px;
       }
 
 
-   }
+    }
 
-   div{
+    div {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:10px;
-    margin-bottom: 20px;
-    button{
-      
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      width:300px;
-      background: #8C5946;
-      border: none;
-      padding:10px;
-      color:#F2F2F2;
-      cursor: pointer;
-      
-      svg{
-        width:20px;
-        height: 20px;
-        display: inline-block;
-        margin-right: 10px;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      button {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        background: #8C5946;
+        border: none;
+        padding: 10px;
+        color: #F2F2F2;
+        cursor: pointer;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+
       }
 
     }
 
-   }
+    span {
+      font-weight: 600;
+      font-size: 14px;
+      font-weight: 600;
+      background: #ccc;
+      color: #A6374B;
+      border: 1px solid #ccc;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.2s linear 0s;
+      border-radius: 10px;
 
-   span{
-    font-weight: 600;
-    font-size:14px;
-    font-weight: 600;
-    background: #ccc;
-    color:#A6374B;
-    border: 1px solid #ccc;
-    padding:10px;
-    cursor: pointer;
-    transition: all 0.2s linear 0s;
-    border-radius: 10px;
-    &:hover{
-    background: #A6374B;
-    color:#CCC;
-    
+      &:hover {
+        background: #A6374B;
+        color: #CCC;
+
+      }
     }
-   }
 
   }
 
